@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>sandia.aolabs.io</title>
-  <meta name="description" content="Alan Pham's Sandia National Laboratories NOMAD internship research record: ratcheting mechanism paper, model-sensitivity study, and presentation materials.">
+  <meta name="description" content="Alan Pham's Sandia National Laboratories NOMAD internship research record for Quantifying the Effect of Non-Physical Parameters on the Nonlinear Dynamics of an Electromechanical Ratcheting Mechanism.">
   <link rel="canonical" href="https://sandia.aolabs.io/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AO Labs">
   <meta property="og:title" content="sandia.aolabs.io">
-  <meta property="og:description" content="Sandia NOMAD ratcheting-mechanism research record, coauthored paper, and presentations.">
+  <meta property="og:description" content="Sandia NOMAD research record, coauthored paper, FEA study results, autoplaying mechanism media, and presentations.">
   <meta property="og:url" content="https://sandia.aolabs.io/">
   <meta property="og:image" content="https://sandia.aolabs.io/assets/paper-cover.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="sandia.aolabs.io">
-  <meta name="twitter:description" content="Sandia NOMAD ratcheting-mechanism research record, coauthored paper, and presentations.">
+  <meta name="twitter:description" content="Sandia NOMAD research record, coauthored paper, FEA study results, autoplaying mechanism media, and presentations.">
   <meta name="twitter:image" content="https://sandia.aolabs.io/assets/paper-cover.jpg">
   <link rel="icon" href="assets/sandia.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://aolabs.io/suite-header.css?v=20260516-suite-bloom">
-  <link rel="stylesheet" href="styles.css?v=20260519-sandia-professional">
+  <link rel="stylesheet" href="styles.css?v=20260519-sandia-research">
 </head>
 <body>
   <header class="suite-topbar" aria-label="sandia navigation">
@@ -41,7 +41,7 @@
     <section class="paper-header" aria-label="Sandia research record">
       <div>
         <p class="kicker">Sandia National Laboratories / NOMAD Research Institute</p>
-        <h1>Quantifying model-setup sensitivity in an electromechanical ratcheting mechanism</h1>
+        <h1>Quantifying the Effect of Non-Physical Parameters on the Nonlinear Dynamics of an Electromechanical Ratcheting Mechanism</h1>
         <p class="authors">Shunsuke Winston, Alan Pham, Brennan Bahr, Aabhas Singh, Chris Schumann, Rob Flicek, Scott Grutzik, Robert J. Kuether, and Kumar Vemaganti.</p>
       </div>
       <div class="primary-actions">
@@ -54,7 +54,7 @@
       <article class="summary-text">
         <h2>Research record</h2>
         <p>Summer 2025 internship work on a watch-like ratcheting mechanism, focused on separating physical response from sensitivity introduced by finite-element setup choices.</p>
-        <p>The study evaluated submodel behavior under shock and vibration while varying mesh density, momentum-balance iteration, and processor count. The public record includes the coauthored paper, the final NOMAD presentation, Alan's Soft Robotics Lab presentation, and extracted mechanism media from the final deck.</p>
+        <p>The study evaluated submodel behavior under shock and vibration while varying mesh density, momentum-balance iteration, and processor count. The public record includes the coauthored paper, the final NOMAD presentation, Alan's Soft Robotics Lab presentation, the completed slide-81 result matrix, and extracted FEA media from the final deck.</p>
       </article>
       <dl class="facts-table">
         <div>
@@ -74,6 +74,48 @@
           <dd>Final NOMAD talk, August 5, 2025</dd>
         </div>
       </dl>
+    </section>
+
+    <section class="section-block internship-context" aria-label="NOMAD internship context">
+      <div class="context-grid">
+        <div>
+          <h2>NOMAD internship context</h2>
+          <p>NOMAD stands for Nonlinear Mechanics and Dynamics Research Institute. Alan's 2025 internship ran June 16-August 8 in Albuquerque through Sandia National Laboratories and the University of New Mexico.</p>
+          <p>The institute placed interns in Sandia research groups for in-person finite-element and nonlinear dynamics work. Alan's Soft Robotics Lab talk documented the research setting, weekly mentor cadence, project-team structure, and the link between this work and soft robotics/compliant mechanism modeling.</p>
+        </div>
+        <dl class="context-list">
+          <div>
+            <dt>Setting</dt>
+            <dd>Sandia National Laboratories; University of New Mexico</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Albuquerque, New Mexico</dd>
+          </div>
+          <div>
+            <dt>Cadence</dt>
+            <dd>Orientation and training, six-week research block, final institute presentation</dd>
+          </div>
+          <div>
+            <dt>Lab link</dt>
+            <dd>Nonlinear modeling of compliant mechanisms and contact-rich motion</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="life-grid" aria-label="Internship life images">
+        <figure>
+          <img src="assets/internship-life-1.jpg" alt="Photo sheet from Alan's Soft Robotics Lab talk showing internship and Albuquerque scenes.">
+          <figcaption>Internship-life photo sheet from the Soft Robotics Lab talk.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/internship-life-2.jpg" alt="Photo sheet from Alan's Soft Robotics Lab talk showing internship activities and local scenes.">
+          <figcaption>Internship-life photo sheet from the Soft Robotics Lab talk.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/internship-life-3.jpg" alt="Photo sheet from Alan's Soft Robotics Lab talk showing internship activities, food, and site visits.">
+          <figcaption>Internship-life photo sheet from the Soft Robotics Lab talk.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="section-block" aria-label="Study structure">
@@ -171,40 +213,40 @@
 
     <section class="section-block" aria-label="FEA excitation animations">
       <h2>FEA excitation animations</h2>
-      <p>Animations extracted from the final PowerPoint show the excitation methods used for the submodels.</p>
+      <p>Autoplaying loops extracted from the final PowerPoint show the excitation methods used for the submodels.</p>
       <div class="animation-grid">
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/psp-haversine-shock-poster.jpg">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/psp-haversine-shock-poster.jpg">
             <source src="assets/psp-haversine-shock.mp4" type="video/mp4">
           </video>
           <figcaption><strong>Pin-spring-pawl.</strong> Haversine shock.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/psp-sinusoidal-vibration-poster.jpg">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/psp-sinusoidal-vibration-poster.jpg">
             <source src="assets/psp-sinusoidal-vibration.mp4" type="video/mp4">
           </video>
           <figcaption><strong>Pin-spring-pawl.</strong> Sinusoidal vibration.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/pin-pawl-haversine-shock-poster.jpg">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/pin-pawl-haversine-shock-poster.jpg">
             <source src="assets/pin-pawl-haversine-shock.mp4" type="video/mp4">
           </video>
           <figcaption><strong>Pin-pawl.</strong> Haversine shock.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/pin-pawl-sinusoidal-vibration-poster.jpg">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/pin-pawl-sinusoidal-vibration-poster.jpg">
             <source src="assets/pin-pawl-sinusoidal-vibration.mp4" type="video/mp4">
           </video>
           <figcaption><strong>Pin-pawl.</strong> Sinusoidal vibration.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/pawl-gear-haversine-shock-poster.jpg">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/pawl-gear-haversine-shock-poster.jpg">
             <source src="assets/pawl-gear-haversine-shock.mp4" type="video/mp4">
           </video>
           <figcaption><strong>Pawl-gear.</strong> Haversine shock.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/pawl-gear-sinusoidal-vibration-poster.jpg">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/pawl-gear-sinusoidal-vibration-poster.jpg">
             <source src="assets/pawl-gear-sinusoidal-vibration.mp4" type="video/mp4">
           </video>
           <figcaption><strong>Pawl-gear.</strong> Sinusoidal vibration.</figcaption>
@@ -216,25 +258,25 @@
       <h2>Directional excitation checks</h2>
       <div class="animation-grid compact">
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/haversine-pulse-x-poster.jpg">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/haversine-pulse-x-poster.jpg">
             <source src="assets/haversine-pulse-x.mp4" type="video/mp4">
           </video>
           <figcaption>Haversine pulse, 6000 g, 0.5 ms, +x.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/haversine-pulse-z-poster.jpg">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/haversine-pulse-z-poster.jpg">
             <source src="assets/haversine-pulse-z.mp4" type="video/mp4">
           </video>
           <figcaption>Haversine pulse, 6000 g, 0.5 ms, +z.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/sinusoid-pawl-x-poster.jpg">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/sinusoid-pawl-x-poster.jpg">
             <source src="assets/sinusoid-pawl-x.mp4" type="video/mp4">
           </video>
           <figcaption>Sinusoidal pawl displacement, 0.005 in, +x.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/sinusoid-pawl-z-poster.jpg">
+          <video autoplay muted loop playsinline preload="auto" poster="assets/sinusoid-pawl-z-poster.jpg">
             <source src="assets/sinusoid-pawl-z.mp4" type="video/mp4">
           </video>
           <figcaption>Sinusoidal pawl displacement, 0.005 in, +z.</figcaption>
@@ -277,5 +319,31 @@
     <p>Public research record for Alan Pham's Sandia internship work. Not an official Sandia National Laboratories site.</p>
     <p>Sandia National Laboratories is managed and operated by National Technology &amp; Engineering Solutions of Sandia, LLC for the U.S. Department of Energy's National Nuclear Security Administration under contract DE-NA0003525.</p>
   </footer>
+  <script>
+    (() => {
+      const loops = Array.from(document.querySelectorAll('video[autoplay]'));
+      const start = (video) => {
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        const play = video.play();
+        if (play && typeof play.catch === 'function') play.catch(() => {});
+      };
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) start(entry.target);
+          });
+        }, { rootMargin: '220px 0px' });
+        loops.forEach((video) => observer.observe(video));
+      } else {
+        loops.forEach(start);
+      }
+      window.addEventListener('pageshow', () => loops.forEach(start));
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) loops.forEach(start);
+      });
+    })();
+  </script>
 </body>
 </html>
