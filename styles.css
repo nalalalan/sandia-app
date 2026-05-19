@@ -263,26 +263,76 @@ figcaption {
   line-height: 1.35;
 }
 
-.media-list {
+.results-table {
+  margin-top: 18px;
+}
+
+.results-table td:not(:first-child) {
+  width: 26%;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.status.good {
+  border-color: #8fc36a;
+  background: #f1f8ec;
+  color: #2f6d1b;
+}
+
+.status.bad {
+  border-color: #e2a0a6;
+  background: #fff1f2;
+  color: #9d1d2a;
+}
+
+.result-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.result-notes article {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.animation-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-top: 16px;
 }
 
-.media-list figure {
+.animation-grid.compact {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.animation-grid figure {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: #fff;
   overflow: hidden;
 }
 
-.media-list video {
+.animation-grid video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #f2f2ef;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .download-list {
@@ -387,7 +437,9 @@ footer p + p {
     gap: 6px;
   }
 
-  .media-list {
+  .result-notes,
+  .animation-grid,
+  .animation-grid.compact {
     grid-template-columns: 1fr;
   }
 
@@ -434,6 +486,26 @@ footer p + p {
   td:nth-child(3) {
     color: var(--muted);
     font-size: 13px;
+  }
+
+  .results-table td:nth-child(n+2)::before {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .results-table td:nth-child(2)::before {
+    content: "Pin-spring-pawl";
+  }
+
+  .results-table td:nth-child(3)::before {
+    content: "Pin-pawl";
+  }
+
+  .results-table td:nth-child(4)::before {
+    content: "Pawl-gear";
   }
 
   .download-actions {

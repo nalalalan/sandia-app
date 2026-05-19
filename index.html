@@ -106,46 +106,138 @@
       </table>
     </section>
 
-    <section class="section-block" aria-label="Result boundary">
+    <section class="section-block" aria-label="FEA study results">
       <div class="two-column">
         <div>
-          <h2>Result boundary</h2>
-          <p>The pin-spring-pawl model was comparatively insensitive to the parameter sweeps. Pin-pawl and pawl-gear cases showed stronger sensitivity where contact and friction dominated, especially in the vibration cases.</p>
-          <p>The paper frames the conclusion as a submodel-level study and points to future assembly-level work rather than claiming a complete mechanism validation.</p>
+          <h2>FEA study results</h2>
+          <p>The completed summary matrix on slide 81 classifies each submodel by whether the response converged as non-physical parameters were varied.</p>
+          <p>Pin-spring-pawl converged across momentum-balance iteration, mesh density, and processor-count sweeps. Pin-pawl did not converge across the same sweeps. Pawl-gear converged for processor count, but remained sensitive for momentum-balance iteration and mesh density.</p>
         </div>
         <figure class="figure-card">
-          <img src="assets/results-summary.jpg" alt="Summary slide showing sensitivity of each submodel to momentum balance iteration, mesh density, and processor count under shock and vibration.">
-          <figcaption>Summary matrix from the NOMAD final presentation.</figcaption>
+          <img src="assets/results-matrix-complete.png" alt="Complete summary matrix from slide 81 showing green convergence for all pin-spring-pawl parameters, red non-convergence for all pin-pawl parameters, red non-convergence for pawl-gear momentum-balance iteration and mesh density, and green convergence for pawl-gear processor count.">
+          <figcaption>Complete result matrix from slide 81 of the NOMAD final presentation.</figcaption>
+        </figure>
+      </div>
+
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th scope="col">Parameter varied</th>
+            <th scope="col">Pin-spring-pawl</th>
+            <th scope="col">Pin-pawl</th>
+            <th scope="col">Pawl-gear</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Momentum-balance iteration</td>
+            <td><span class="status good">Converged</span></td>
+            <td><span class="status bad">Non-convergent / chaotic</span></td>
+            <td><span class="status bad">Non-convergent / chaotic</span></td>
+          </tr>
+          <tr>
+            <td>Mesh density</td>
+            <td><span class="status good">Converged</span></td>
+            <td><span class="status bad">Non-convergent / chaotic</span></td>
+            <td><span class="status bad">Non-convergent / chaotic</span></td>
+          </tr>
+          <tr>
+            <td>Processor count</td>
+            <td><span class="status good">Converged</span></td>
+            <td><span class="status bad">Non-convergent / chaotic</span></td>
+            <td><span class="status good">Converged</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section-block" aria-label="Result notes by submodel">
+      <h2>Result notes by submodel</h2>
+      <div class="result-notes">
+        <article>
+          <h3>Pin-spring-pawl</h3>
+          <p>Complete convergence between runs for the momentum-balance, mesh-density, and processor-count sweeps. The Haversine cases showed that one momentum-balance iteration was noisier but still tracked the trend; the sinusoidal cases converged while the idealized model underpredicted force.</p>
+        </article>
+        <article>
+          <h3>Pin-pawl</h3>
+          <p>Rotation and contact force became erratic after contact/friction dominated. Very coarse mesh cases produced lock-up behavior, and sinusoidal vibration amplified divergence relative to the Haversine shock cases.</p>
+        </article>
+        <article>
+          <h3>Pawl-gear</h3>
+          <p>Momentum-balance iteration and mesh density remained sensitive. Processor-count variation was the one Pawl-gear parameter class marked convergent in the completed slide-81 summary.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" aria-label="FEA excitation animations">
+      <h2>FEA excitation animations</h2>
+      <p>Animations extracted from the final PowerPoint show the excitation methods used for the submodels.</p>
+      <div class="animation-grid">
+        <figure>
+          <video muted playsinline preload="metadata" controls poster="assets/psp-haversine-shock-poster.jpg">
+            <source src="assets/psp-haversine-shock.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Pin-spring-pawl.</strong> Haversine shock.</figcaption>
+        </figure>
+        <figure>
+          <video muted playsinline preload="metadata" controls poster="assets/psp-sinusoidal-vibration-poster.jpg">
+            <source src="assets/psp-sinusoidal-vibration.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Pin-spring-pawl.</strong> Sinusoidal vibration.</figcaption>
+        </figure>
+        <figure>
+          <video muted playsinline preload="metadata" controls poster="assets/pin-pawl-haversine-shock-poster.jpg">
+            <source src="assets/pin-pawl-haversine-shock.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Pin-pawl.</strong> Haversine shock.</figcaption>
+        </figure>
+        <figure>
+          <video muted playsinline preload="metadata" controls poster="assets/pin-pawl-sinusoidal-vibration-poster.jpg">
+            <source src="assets/pin-pawl-sinusoidal-vibration.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Pin-pawl.</strong> Sinusoidal vibration.</figcaption>
+        </figure>
+        <figure>
+          <video muted playsinline preload="metadata" controls poster="assets/pawl-gear-haversine-shock-poster.jpg">
+            <source src="assets/pawl-gear-haversine-shock.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Pawl-gear.</strong> Haversine shock.</figcaption>
+        </figure>
+        <figure>
+          <video muted playsinline preload="metadata" controls poster="assets/pawl-gear-sinusoidal-vibration-poster.jpg">
+            <source src="assets/pawl-gear-sinusoidal-vibration.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Pawl-gear.</strong> Sinusoidal vibration.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section-block" aria-label="Supplementary mechanism media">
-      <h2>Supplementary mechanism media</h2>
-      <div class="media-list">
+    <section class="section-block" aria-label="Directional excitation checks">
+      <h2>Directional excitation checks</h2>
+      <div class="animation-grid compact">
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/mechanism-overview-poster.jpg">
-            <source src="assets/mechanism-overview.mp4" type="video/mp4">
+          <video muted playsinline preload="metadata" controls poster="assets/haversine-pulse-x-poster.jpg">
+            <source src="assets/haversine-pulse-x.mp4" type="video/mp4">
           </video>
-          <figcaption>Full mechanism animation from the final presentation.</figcaption>
+          <figcaption>Haversine pulse, 6000 g, 0.5 ms, +x.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/gear-contact-poster.jpg">
-            <source src="assets/gear-contact.mp4" type="video/mp4">
+          <video muted playsinline preload="metadata" controls poster="assets/haversine-pulse-z-poster.jpg">
+            <source src="assets/haversine-pulse-z.mp4" type="video/mp4">
           </video>
-          <figcaption>Pawl-gear contact region.</figcaption>
+          <figcaption>Haversine pulse, 6000 g, 0.5 ms, +z.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/pawl-contact-poster.jpg">
-            <source src="assets/pawl-contact.mp4" type="video/mp4">
+          <video muted playsinline preload="metadata" controls poster="assets/sinusoid-pawl-x-poster.jpg">
+            <source src="assets/sinusoid-pawl-x.mp4" type="video/mp4">
           </video>
-          <figcaption>Ratcheting contact close-up.</figcaption>
+          <figcaption>Sinusoidal pawl displacement, 0.005 in, +x.</figcaption>
         </figure>
         <figure>
-          <video muted playsinline preload="metadata" controls poster="assets/multibody-model-poster.jpg">
-            <source src="assets/multibody-model.mp4" type="video/mp4">
+          <video muted playsinline preload="metadata" controls poster="assets/sinusoid-pawl-z-poster.jpg">
+            <source src="assets/sinusoid-pawl-z.mp4" type="video/mp4">
           </video>
-          <figcaption>Reduced multibody model view.</figcaption>
+          <figcaption>Sinusoidal pawl displacement, 0.005 in, +z.</figcaption>
         </figure>
       </div>
     </section>
